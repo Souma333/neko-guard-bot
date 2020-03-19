@@ -92,7 +92,7 @@ client.on("message", async (message) => {
 });
 
 // function which log in the bot
-client.login("NjkwMDE4OTIzNzQzMjgxMzUz.XnN46A.QyxuunxfQ2x7NfmY5ZJRMfw1XPw");
+client.login("NjkwMzMyNDQ3MzAwNTE4MTQ4.XnQEdA.8fcWBEKUpwTIcrXKU-GpvTBkJto");
 
 
 
