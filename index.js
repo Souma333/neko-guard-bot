@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client  = new Discord.Client();
 const BOT_VERSION = "1.0.0";
 //prefix for all commands.
-const commandPrefix = "_";
+const commandPrefix = "!";
 // This is a function which will be called when the bot is ready.
 client.on("ready", () => {
     console.log("Bot started! Version " + BOT_VERSION);
@@ -25,32 +25,41 @@ client.on("message", async (message) => {
     try {
         //chat filter
     let filter = message.content.toLowerCase().split(" ")
+    const channell = message.guild.channels.find(channel => channel.name === "🔞nsfw-koya")
     filter.forEach(e => { //menjalankan sejumlah kata yang masuk //filter chat  bermasalah
         switch (e) {
             case "ajg":
                 message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
+                message.channel.send("Kalo Mau Bebas Silahkan Ke "+channell)
                 break;
             case "tai":
                 message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
+                message.channel.send("Kalo Mau Bebas Silahkan Ke "+channell)
                 break;
             case "babi":
                 message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
+                message.channel.send("Kalo Mau Bebas Silahkan Ke "+channell)
                 break;
             case "anjeng":
                 message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
-            break;
+                message.channel.send("Kalo Mau Bebas Silahkan Ke "+channell)
+                break;
             case "anjing":
                 message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
-            break;
+                message.channel.send("Kalo Mau Bebas Silahkan Ke "+channell)
+                break;
             case "jancok":
                 message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
-            break;
+                message.channel.send("Kalo Mau Bebas Silahkan Ke "+channell)
+                break;
             case "kontol":
                 message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
-            break;
+                message.channel.send("Kalo Mau Bebas Silahkan Ke "+channell)
+                break;
             case "memek":
                 message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
-            break;
+                message.channel.send("Kalo Mau Bebas Silahkan Ke "+channell)
+                break;
             default:
                 
             break;
@@ -83,7 +92,7 @@ client.on("message", async (message) => {
 });
 
 // function which log in the bot
-client.login("NjkwMDE4OTIzNzQzMjgxMzUz.XnNsmg.6xlmk6UTV2ytRzaXiGpP94ZW3As");
+client.login("NjkwMDE4OTIzNzQzMjgxMzUz.XnN1aA.tySO1MfIrcYEBuCeYX9zkvutB0s");
 
 
 
