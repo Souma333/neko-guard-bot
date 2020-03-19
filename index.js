@@ -8,9 +8,6 @@ client.on("ready", () => {
     console.log("Bot started! Version " + BOT_VERSION);
 });
 
-// function which log in the bot
-client.login("NjkwMDE4OTIzNzQzMjgxMzUz.XnNXuQ.9ZfTWEQRDGRlZLGPcj-CSNjBlyg");
-
 //welcome pesan
 client.on("guildMemberAdd", async (member) => {
     try {
@@ -84,6 +81,9 @@ client.on("message", async (message) => {
         console.error(error)
     }
 });
+
+// function which log in the bot
+client.login("NjkwMDE4OTIzNzQzMjgxMzUz.XnNsmg.6xlmk6UTV2ytRzaXiGpP94ZW3As");
 
 
 
