@@ -1,0 +1,28 @@
+{
+  "name": "mybotdc",
+  "version": "1.0.0",
+  "description": "discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "Discord.js",
+    "Discord",
+    "Bot"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olqlinzky/mybotdc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olqlinzky/mybotdc/issues"
+  },
+  "homepage": "https://github.com/olqlinzky/mybotdc#readme",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "nodemon": "^2.0.2"
+  }
+}
