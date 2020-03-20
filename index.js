@@ -95,12 +95,6 @@ client.on("message", async (message) => {
     }
 });
 
-<<<<<<< HEAD
-// function which log in the bot
-client.login(process.env.TOKEN);
-=======
->>>>>>> 0d3d1145b1f4fe8b5ff40a811e4c932cf938df4b
-
 
 
 
