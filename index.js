@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const client  = new Discord.Client();
+require("dotenv").config()
 const BOT_VERSION = "1.0.0";
 //prefix for all commands.
 const commandPrefix = "!";
@@ -92,7 +93,7 @@ client.on("message", async (message) => {
 });
 
 // function which log in the bot
-client.login("NjkwMDE4OTIzNzQzMjgxMzUz.XnN2JQ.HB-H0FDkhx8K9qxhcJesepPl13Q");
+client.login(process.env.TOKEN);
 
 
 
