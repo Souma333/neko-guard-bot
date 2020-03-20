@@ -2,6 +2,9 @@ const Discord = require("discord.js");
 const client  = new Discord.Client();
 require("dotenv").config()
 const BOT_VERSION = "1.0.0";
+// function which log in the bot
+client.login("NjkwMzMyNDQ3MzAwNTE4MTQ4.XnQFiQ.sM_pLG5xSc9-0YSH90GGdtZRNe4");
+
 //prefix for all commands.
 const commandPrefix = "!";
 // This is a function which will be called when the bot is ready.
@@ -92,8 +95,11 @@ client.on("message", async (message) => {
     }
 });
 
+<<<<<<< HEAD
 // function which log in the bot
 client.login(process.env.TOKEN);
+=======
+>>>>>>> 0d3d1145b1f4fe8b5ff40a811e4c932cf938df4b
 
 
 
