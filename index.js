@@ -3,7 +3,7 @@ const client  = new Discord.Client();
 require("dotenv").config()
 const BOT_VERSION = "1.0.0";
 // function which log in the bot
-client.login("NjkwMzMyNDQ3MzAwNTE4MTQ4.XnQFiQ.sM_pLG5xSc9-0YSH90GGdtZRNe4");
+client.login(process.env.TOKEN);
 
 //prefix for all commands.
 const commandPrefix = "!";
