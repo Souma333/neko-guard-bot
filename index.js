@@ -7,6 +7,8 @@ bot.login(process.env.KEY);
 const commandPrefix = "_";
 // This is a function which will be called when the bot is ready.
 bot.on("ready", () => {
+    bot.user.setStatus("Online")
+    bot.user.setGame("Nekopoi")
     console.log("Bot started! Version " + BOT_VERSION);
 });
 let server = ["708523418731151431"]
