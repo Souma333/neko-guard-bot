@@ -9,7 +9,7 @@ const commandPrefix = "_";
 bot.on("ready", () => {
     console.log("Bot started! Version " + BOT_VERSION);
 });
-let server = ["708523418731151431", "708496299602870293"]
+let server = ["708523418731151431"]
 let data = ["anjeng", "kucing", "babi", "tai", "kontol", "ngentod", "memek", "asw", "ngentod"]
 bot.on("message", async (msg) => {
     try {
