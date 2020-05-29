@@ -36,9 +36,9 @@ bot.on("message", async (msg) => {
         await data.forEach(e => {
              filtermsg.filter(f => {
                 if(e == f){
-                    msg.delete()
-                    msg.channel.send("Silahkan ke <#708523418731151431> Abang/Neng <@"+msg.author+">")
-                    msg.channel.send("kalau mau toxic :kissing_heart: ")
+                      msg.channel.send("Silahkan ke <#708523418731151431> Abang/Neng <@"+msg.author+">")
+                      msg.channel.send("kalau mau toxic :kissing_heart: ")
+                      msg.delete()
                     // msg.channel.send("Alasan Pesan Di hapus : ")
                     // msg.channel.send(new Discord.MessageEmbed()
                     // .addField("Karena Terdapat Kata Terlarang !!", msg.author)
