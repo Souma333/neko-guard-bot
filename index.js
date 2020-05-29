@@ -6,9 +6,36 @@ bot.login(process.env.KEY);
 //prefix for all commands.
 const commandPrefix = "_";
 // This is a function which will be called when the bot is ready.
-bot.on("ready", (msg) => {
+bot.on("ready", () => {
     console.log("Bot started! Version " + BOT_VERSION);
 });
+let server = ["708523418731151431"]
+let data = ["anjeng", "kucing", "babi", "tai", "kontol", "ngentod", "memek", "asw", "ngentod"]
+bot.on("message", async (msg) => {
+    try {
+        server.forEach(exceptserver => {
+            if(msg.channel.id !== exceptserver){
+                let filtermsg = msg.content.toLowerCase().split(" ")
+                //const myfilter = filtermsg.filter(f => console.log(f))
+                await data.forEach(e => {
+                    filtermsg.filter(f => {
+                        if(e == f){
+                            msg.channel.send("Silahkan ke <#708523418731151431> Abang/Neng <@"+msg.author+">")
+                            msg.channel.send("kalau mau toxic :kissing_heart: ")
+                            msg.delete()
+                            return
+                        } 
+                    })
+                })
+            }
+        })
+    } catch (error) {
+        console.error(error)
+    }
+})
+
+
+
 
 // //welcome pesan
 // bot.on("guildMemberAdd", async (member) => {
@@ -20,36 +47,6 @@ bot.on("ready", (msg) => {
 //         console.error(error)
 //     }   
 // })
-
-let data = ["anjeng", "kucing", "babi", "tai", "kontol", "ngentod", "memek", "asw", "ngentod"]
-//pesan
-bot.on("message", async (msg) => {
-    try {
-        // function action (){
-        //     message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
-        //     message.delete()
-        //   }
-        //chat filter
-    if(msg.channel.id !== "708523418731151431"){
-        let filtermsg = msg.content.toLowerCase().split(" ")
-        //const myfilter = filtermsg.filter(f => console.log(f))
-        await data.forEach(e => {
-             filtermsg.filter(f => {
-                if(e == f){
-                      msg.channel.send("Silahkan ke <#708523418731151431> Abang/Neng <@"+msg.author+">")
-                      msg.channel.send("kalau mau toxic :kissing_heart: ")
-                      msg.delete()
-                    // msg.channel.send("Alasan Pesan Di hapus : ")
-                    // msg.channel.send(new Discord.MessageEmbed()
-                    // .addField("Karena Terdapat Kata Terlarang !!", msg.author)
-                    // .setColor("RED"))
-                    return
-                 } 
-            })
-        })
-    }
-    
-    
 
 // //commands or interact with bot
 //         let command = message.content.toLowerCase().split(" ")[0];
@@ -70,33 +67,14 @@ bot.on("message", async (msg) => {
 //             message.channel.send({embed: embed});
 //         }
 
-    } catch (error) {
-        console.error(error)
-    }
-});
 
 
 
 
 
-// const Dc = require('discord.js')
-// const bot  = new Dc.Client()
-// require('dotenv').config()
-// const PREFIX = "_";
-// //==============
-// bot.on('ready', () => {
-//     console.log("bot music started!!!")
-// })
-// bot.on('message', (msg) => {
-//     let argument = msg.content.substring(PREFIX.length).split(" ")
-//     console.log(argument)
-//     switch(argument[0]){ //argument terbaru
-//         case 'play':
-//             if(!argument[1]) //cek ada argument link / gk
-//         break;
-        
-//     }
 
-// })
-// //==============
-// bot.login(process.env.KEY);
+
+
+
+
+
