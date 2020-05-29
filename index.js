@@ -28,6 +28,24 @@ bot.on("message", async (msg) => {
                     })                
             }
         })
+        //commands or interact with bot
+         let command = msg.content.toLowerCase().split(" ")[0];
+         command = command.slice(commandPrefix.length);
+
+         if(command === "beb"){
+             msg.channel.send("Hai <@" + msg.author + "> ! Jangan Lupa Senyum Hari Ini :kissing_heart: :smiley: ");
+         }
+         if(command === "help"){
+             let embed = new Discord.MessageEmbed() //buat set embed discord card message
+                 .addField("_hello", "=> Biar Nggk Merasa Bosen :kissing_heart: ")
+                 .addField("_help", "=> Biar Nggk Kesasar :kissing_heart:")
+                 .setTitle("Commands:")
+                 .setFooter("uWu")
+                 .setColor("ORANGE");
+                 msg.channel.send("Hello " + msg.author + " Elu Manggil Gw Buat Liat Semua Options Yang Tersedia,,,Nih Comot Aja Free Kok");
+             // Send the embed with message.channel.send()
+             msg.channel.send({embed: embed});
+         }
     } catch (error) {
         console.error(error)
     }
@@ -47,24 +65,7 @@ bot.on("message", async (msg) => {
 //     }   
 // })
 
-// //commands or interact with bot
-         let command = message.content.toLowerCase().split(" ")[0];
-         command = command.slice(commandPrefix.length);
-
-         if(command === "beb"){
-             message.channel.send("Hai <@" + message.author + "> ! Jangan Lupa Senyum Hari Ini :kissing_heart: :smiley: ");
-         }
-         if(command === "help"){
-             let embed = new Discord.MessageEmbed() //buat set embed discord card message
-                 .addField("_hello", "=> Biar Nggk Merasa Bosen :kissing_heart: ")
-                 .addField("_help", "=> Biar Nggk Kesasar :kissing_heart:")
-                 .setTitle("Commands:")
-                 .setFooter("uWu")
-                 .setColor("ORANGE");
-                 message.channel.send("Hello " + message.author + " Elu Manggil Gw Buat Liat Semua Options Yang Tersedia,,,Nih Comot Aja Free Kok");
-             // Send the embed with message.channel.send()
-             message.channel.send({embed: embed});
-         }
+// 
 
 
 
