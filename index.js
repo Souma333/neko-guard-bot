@@ -9,24 +9,26 @@ const commandPrefix = "_";
 bot.on("ready", () => {
     console.log("Bot started! Version " + BOT_VERSION);
 });
-let server = ["708523418731151431", "708496299602870293"]
+let server = ["708523418731151431"]
 let data = ["anjeng", "kucing", "babi", "tai", "kontol", "ngentod", "memek", "asw", "ngentod"]
 bot.on("message", async (msg) => {
     try {
         server.forEach(exceptserver => {
             if(msg.channel.id !== exceptserver){
                 let filtermsg = msg.content.toLowerCase().split(" ")
-                //const myfilter = filtermsg.filter(f => console.log(f))
-                await data.forEach(e => {
-                    filtermsg.filter(f => {
-                        if(e == f){
-                            msg.channel.send("Silahkan ke <#708523418731151431> Abang/Neng <@"+msg.author+">")
-                            msg.channel.send("kalau mau toxic :kissing_heart: ")
-                            msg.delete()
-                            return
-                        } 
+                return new Promise((res, rej)=>{
+                    data.forEach(e => {
+                        filtermsg.filter(f => {
+                            if(e == f){
+                                msg.channel.send("Silahkan ke <#708523418731151431> Abang/Neng <@"+msg.author+">")
+                                msg.channel.send("kalau mau toxic :kissing_heart: ")
+                                msg.delete()
+                                return res(true)
+                            }
+                        })
                     })
                 })
+                 
             }
         })
     } catch (error) {
