@@ -9,7 +9,7 @@ const commandPrefix = "_";
 bot.on("ready", () => {   
     console.log("Bot started! Version " + BOT_VERSION)
     bot.user.setStatus("Online")
-    bot.user.setGame("Nekopoi", "https://www.youtube.com/")
+    bot.user.setActivity('Nekopi', { type: 'WATCHING' });
 });
 let server = ["708523418731151431"]
 let data = ["anjeng", "ajg", "kntol", "jembot", "jembut", "jembod", "jmbd", "kucing", "babi", "tai", "kontol", "ngentod","bangsat","bajingan", "memek", "asw", "ngentod", "anjing", "pantek", "tek", "jancok", "vantek", "anjir","anjer", "kambing"]
