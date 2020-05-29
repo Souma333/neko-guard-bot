@@ -10,7 +10,7 @@ bot.on("ready", () => {
     console.log("Bot started! Version " + BOT_VERSION);
 });
 
-//welcome pesan
+/*//welcome pesan
 bot.on("guildMemberAdd", async (member) => {
     try {
         const channel = member.guild.channels.find(channel => channel.name === "welcome")
@@ -19,7 +19,7 @@ bot.on("guildMemberAdd", async (member) => {
     } catch (error) {
         console.error(error)
     }   
-})
+})*/
 
 
 //pesan
