@@ -8,8 +8,6 @@ const commandPrefix = "_";
 // This is a function which will be called when the bot is ready.
 bot.on("ready", () => {   
     console.log("Bot started! Version " + BOT_VERSION)
-    bot.user.setStatus("Online")
-    bot.user.setActivity('nekopii', { type:'STREAMING'})
 });
 let server = ["708523418731151431"]
 let data = ["anjeng", "ajg", "kntol", "jembot", "jembut", "jembod", "jmbd", "kucing", "babi", "tai", "kontol", "ngentod","bangsat","bajingan", "memek", "asw", "ngentod", "anjing", "pantek", "tek", "jancok", "vantek", "anjir","anjer", "kambing"]
