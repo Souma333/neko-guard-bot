@@ -21,7 +21,6 @@ bot.on("message", async (msg) => {
                             if(e == f){
                                 msg.delete()
                                 msg.channel.send("Silahkan ke <#708523418731151431> Abang/Neng <@"+msg.author+">")
-                                msg.channel.send(msg.author.avatar)
                                 msg.channel.send("kalau mau toxic :kissing_heart: ")
                                 return
                             }
