@@ -9,7 +9,6 @@ const commandPrefix = "_";
 bot.on("ready", () => {   
     console.log("Bot started! Version " + BOT_VERSION)
     bot.user.setStatus("Online")
-        bot.user.setActivity('_help')
     bot.user.setActivity(':3', { type: 'NONTON DI NEKO++' })
 });
 let server = ["708523418731151431"]
