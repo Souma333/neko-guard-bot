@@ -10,7 +10,7 @@ bot.on("ready", () => {
     console.log("Bot started! Version " + BOT_VERSION);
 });
 let server = ["708523418731151431"]
-let data = ["anjeng", "kucing", "babi", "tai", "kontol", "ngentod", "memek", "asw", "ngentod", "anjing", "pantek", "tek", "jancok", "vantek", "anjir", "kambing"]
+let data = ["anjeng", "kucing", "babi", "tai", "kontol", "ngentod", "memek", "asw", "ngentod", "anjing", "pantek", "tek", "jancok", "vantek", "anjir","anjer", "kambing"]
 bot.on("message", async (msg) => {
     try {
         server.forEach(exceptserver => {
