@@ -21,7 +21,7 @@ bot.on("ready", (msg) => {
 //     }   
 // })
 
-let data = ["anjeng", "kucing", "babi", "tai", "kontol", "ngentod", "memek"]
+let data = ["anjeng", "kucing", "babi", "tai", "kontol", "ngentod", "memek", "asw", "ngentod"]
 //pesan
 bot.on("message", async (msg) => {
     try {
