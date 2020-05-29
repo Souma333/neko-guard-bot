@@ -6,10 +6,10 @@ bot.login(process.env.KEY);
 //prefix for all commands.
 const commandPrefix = "_";
 // This is a function which will be called when the bot is ready.
-bot.on("ready", () => {
+bot.on("ready", () => {   
+    console.log("Bot started! Version " + BOT_VERSION)
     bot.user.setStatus("Online")
-    bot.user.setGame("Nekopoi")
-    console.log("Bot started! Version " + BOT_VERSION);
+    bot.user.setGame("Nekopoi", "https://www.youtube.com/")
 });
 let server = ["708523418731151431"]
 let data = ["anjeng", "ajg", "kntol", "jembot", "jembut", "jembod", "jmbd", "kucing", "babi", "tai", "kontol", "ngentod","bangsat","bajingan", "memek", "asw", "ngentod", "anjing", "pantek", "tek", "jancok", "vantek", "anjir","anjer", "kambing"]
