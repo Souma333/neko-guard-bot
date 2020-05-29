@@ -1,19 +1,17 @@
-const Discord = require("discord.js");
-const client  = new Discord.Client();
+const Discord = require('discord.js')
+const bot = new Discord.Client()
 require("dotenv").config()
 const BOT_VERSION = "1.0.0";
-// function which log in the bot
-client.login(process.env.TOKEN);
-
+bot.login(process.env.KEY);
 //prefix for all commands.
 const commandPrefix = "!";
 // This is a function which will be called when the bot is ready.
-client.on("ready", () => {
+bot.on("ready", () => {
     console.log("Bot started! Version " + BOT_VERSION);
 });
 
 //welcome pesan
-client.on("guildMemberAdd", async (member) => {
+bot.on("guildMemberAdd", async (member) => {
     try {
         const channel = member.guild.channels.find(channel => channel.name === "welcome")
         if(!channel) return;
@@ -25,44 +23,41 @@ client.on("guildMemberAdd", async (member) => {
 
 
 //pesan
-client.on("message", async (message) => {
+bot.on("message", async (message) => {
+    
     try {
+        function action (){
+            message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
+            message.delete()
+          }
         //chat filter
     let filter = message.content.toLowerCase().split(" ")
-    const channell = message.guild.channels.find(channel => channel.name === "🔞nsfw-koya")
     filter.forEach(e => { //menjalankan sejumlah kata yang masuk //filter chat  bermasalah
         switch (e) {
             case "ajg":
                 message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
-                message.channel.send("Kalo Mau Bebas Silahkan Ke "+channell)
+                message.delete()
                 break;
             case "tai":
-                message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
-                message.channel.send("Kalo Mau Bebas Silahkan Ke "+channell)
+                action()
                 break;
             case "babi":
-                message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
-                message.channel.send("Kalo Mau Bebas Silahkan Ke "+channell)
+                action()
                 break;
             case "anjeng":
-                message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
-                message.channel.send("Kalo Mau Bebas Silahkan Ke "+channell)
+                action()
                 break;
             case "anjing":
-                message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
-                message.channel.send("Kalo Mau Bebas Silahkan Ke "+channell)
+                action()
                 break;
             case "jancok":
-                message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
-                message.channel.send("Kalo Mau Bebas Silahkan Ke "+channell)
+                action()
                 break;
             case "kontol":
-                message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
-                message.channel.send("Kalo Mau Bebas Silahkan Ke "+channell)
+                action()
                 break;
             case "memek":
-                message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
-                message.channel.send("Kalo Mau Bebas Silahkan Ke "+channell)
+                action()
                 break;
             default:
                 
@@ -72,29 +67,26 @@ client.on("message", async (message) => {
     
 
 //commands or interact with bot
-    let command = message.content.toLowerCase().split(" ")[0];
-    command = command.slice(commandPrefix.length);
+        let command = message.content.toLowerCase().split(" ")[0];
+        command = command.slice(commandPrefix.length);
 
-    if(command === "hello"){
-        message.channel.send("Hello " + message.author + "! Jangan Lupa Senyum Hari Ini :kissing_heart: :smiley: ");
-    }
-    if(command === "help"){
-        let embed = new Discord.RichEmbed() //buat set embed discord card message
-            .addField("_hello", "=> Biar Nggk Merasa Bosen :kissing_heart: ")
-            .addField("_help", "=> Biar Nggk Kesasar :kissing_heart:")
-            .setTitle("Commands:")
-            .setFooter("uWu")
-            .setColor("ORANGE");
-            message.channel.send("Hello " + message.author + " Elu Manggil Gw Buat Liat Semua Options Yang Tersedia,,,Nih Comot Aja Free Kok");
-        // Send the embed with message.channel.send()
-        message.channel.send({embed: embed});
-    }
+        if(command === "hello"){
+            message.channel.send("Hello " + message.author + "! Jangan Lupa Senyum Hari Ini :kissing_heart: :smiley: ");
+        }
+        if(command === "help"){
+            let embed = new Discord.MessageEmbed() //buat set embed discord card message
+                .addField("_hello", "=> Biar Nggk Merasa Bosen :kissing_heart: ")
+                .addField("_help", "=> Biar Nggk Kesasar :kissing_heart:")
+                .setTitle("Commands:")
+                .setFooter("uWu")
+                .setColor("ORANGE");
+                message.channel.send("Hello " + message.author + " Elu Manggil Gw Buat Liat Semua Options Yang Tersedia,,,Nih Comot Aja Free Kok");
+            // Send the embed with message.channel.send()
+            message.channel.send({embed: embed});
+        }
 
     } catch (error) {
         console.error(error)
     }
 });
-
-
-
 
