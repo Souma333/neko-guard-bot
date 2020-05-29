@@ -6,7 +6,7 @@ bot.login(process.env.KEY);
 //prefix for all commands.
 const commandPrefix = "_";
 // This is a function which will be called when the bot is ready.
-bot.on("ready", () => {
+bot.on("ready", (msg) => {
     console.log("Bot started! Version " + BOT_VERSION);
 });
 
@@ -21,22 +21,34 @@ bot.on("ready", () => {
 //     }   
 // })
 
-let data = ["anjing", "kucing", "babi"]
+let data = ["anjeng", "kucing", "babi", "tai", "kontol", "ngentod", "memek"]
 //pesan
-bot.on("message", async (message) => {
+bot.on("message", async (msg) => {
     try {
         // function action (){
         //     message.channel.send("Hei "+message.author+" !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
         //     message.delete()
         //   }
         //chat filter
-    let filtermsg = message.content.toLowerCase().split(" ")
-    const myfilter = data.filter(d => d == filtermsg)
-    if(myfilter){
-      message.channel.send("Hei ", message.author," !, Kamu Mengucapkan Kata-Kata Kasar Yang Bukan 'Celetehan' ")
-      message.delete()
-      return
+    if(msg.channel.id !== "708523418731151431"){
+        let filtermsg = msg.content.toLowerCase().split(" ")
+        //const myfilter = filtermsg.filter(f => console.log(f))
+        await data.forEach(e => {
+             filtermsg.filter(f => {
+                if(e == f){
+                    msg.delete()
+                    msg.channel.send("Silahkan ke <#708523418731151431> Abang/Neng <@"+msg.author+">")
+                    msg.channel.send("kalau mau toxic :kissing_heart: ")
+                    // msg.channel.send("Alasan Pesan Di hapus : ")
+                    // msg.channel.send(new Discord.MessageEmbed()
+                    // .addField("Karena Terdapat Kata Terlarang !!", msg.author)
+                    // .setColor("RED"))
+                    return
+                 } 
+            })
+        })
     }
+    
     
 
 // //commands or interact with bot
@@ -67,14 +79,24 @@ bot.on("message", async (message) => {
 
 
 
+// const Dc = require('discord.js')
+// const bot  = new Dc.Client()
+// require('dotenv').config()
+// const PREFIX = "_";
+// //==============
+// bot.on('ready', () => {
+//     console.log("bot music started!!!")
+// })
+// bot.on('message', (msg) => {
+//     let argument = msg.content.substring(PREFIX.length).split(" ")
+//     console.log(argument)
+//     switch(argument[0]){ //argument terbaru
+//         case 'play':
+//             if(!argument[1]) //cek ada argument link / gk
+//         break;
+        
+//     }
 
-
-
-
-
-
-
-
-
-
-
+// })
+// //==============
+// bot.login(process.env.KEY);
