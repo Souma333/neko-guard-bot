@@ -45,8 +45,8 @@ bot.on("message", async (msg) => {
          }
          if(command === "help"){
              let embed = new Discord.MessageEmbed() //buat set embed discord card message
-                 .addField("_hello", "=> Biar Nggk Merasa Bosen :kissing_heart: ")
-                 .addField("_help", "=> Biar Nggk Kesasar :kissing_heart:")
+                 .addField(":hello", "=> Biar Nggk Merasa Bosen :kissing_heart: ")
+                 .addField(":help", "=> Biar Nggk Kesasar :kissing_heart:")
                  .setTitle("Commands:")
                  .setFooter("uWu")
                  .setColor("ORANGE");
