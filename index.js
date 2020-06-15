@@ -9,7 +9,7 @@ const commandPrefix = ":";
 bot.on("ready", () => {   
     console.log("Bot started! Version " + BOT_VERSION)
     bot.user.setStatus("Online")
-    bot.user.setActivity('Nekopoi', { type:'WATCHING'})
+    bot.user.setActivity('Cheerfull Forest', { type:'WATCHING'})
 });
 let server = ["708523418731151431"]
 /*
