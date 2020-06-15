@@ -16,7 +16,7 @@ let server = ["708523418731151431"]
 * Tambah kata terlarang di sini
 */
 let data = [
-    "anjeng", "ajg", "kntol", "jembot", "jembut", "jembod", "jmbd", "babi", "tai", "kontol", 
+    "anjeng", "ajg", "kntol", "jembot", "jembut", "jembod", "jmbd", "babi", "tai", "kontol", "asu", 
     "ngentod","bangsat","bajingan", "memek", "asw", "ngentod", "anjing", "pantek", "tek", "jancok", 
     "vantek", "anjir","anjer", "kambing"]
 bot.on("message", async (msg) => {
