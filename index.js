@@ -44,7 +44,7 @@ bot.on("message", async (msg) => {
                  .setTitle("Commands:")
                  .setFooter("uWu")
                  .setColor("ORANGE");
-                 msg.channel.send("Hello " + msg.author + " Elu Manggil Gw Buat Liat Semua Options Yang Tersedia,,,Nih Comot Aja Free Kok");
+                 msg.channel.send("Hello <@" + msg.author + "> Elu Manggil Gw Buat Liat Semua Options Yang Tersedia,,,Nih Comot Aja Free Kok");
              // Send the embed with message.channel.send()
              msg.channel.send({embed: embed});
          }
