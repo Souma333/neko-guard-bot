@@ -4,7 +4,7 @@ require("dotenv").config()
 const BOT_VERSION = "1.0.0";
 bot.login(process.env.KEY);
 //prefix for all commands.
-const commandPrefix = "_";
+const commandPrefix = ":";
 // This is a function which will be called when the bot is ready.
 bot.on("ready", () => {   
     console.log("Bot started! Version " + BOT_VERSION)
