@@ -9,7 +9,7 @@ const commandPrefix = ":";
 bot.on("ready", () => {   
     console.log("Bot started! Version " + BOT_VERSION)
     bot.user.setStatus("Online")
-    bot.user.setActivity('Nekopoi', { type:'WATCHING'})
+    bot.user.setActivity('Cheerful Forest', { type:'WATCHING'})
 });
 let server = ["708523418731151431"]
 /*
@@ -45,8 +45,8 @@ bot.on("message", async (msg) => {
          }
          if(command === "help"){
              let embed = new Discord.MessageEmbed() //buat set embed discord card message
-                 .addField(":hello", "=> Biar Nggk Merasa Bosen :kissing_heart: ")
-                 .addField(":help", "=> Biar Nggk Kesasar :kissing_heart:")
+                 .addField("_hello", "=> Biar Nggk Merasa Bosen :kissing_heart: ")
+                 .addField("_help", "=> Biar Nggk Kesasar :kissing_heart:")
                  .setTitle("Commands:")
                  .setFooter("uWu")
                  .setColor("ORANGE");
