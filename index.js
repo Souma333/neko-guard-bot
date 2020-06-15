@@ -9,10 +9,10 @@ const commandPrefix = "_";
 bot.on("ready", () => {   
     console.log("Bot started! Version " + BOT_VERSION)
     bot.user.setStatus("Online")
-    bot.user.setActivity('Nekopoi', { type:'WATCHING'})
+    bot.user.setActivity('Cheerful Forest', { type:'WATCHING'})
 });
 let server = ["708523418731151431"]
-let data = ["anjeng", "ajg", "kntol", "jembot", "jembut", "jembod", "jmbd", "babi", "tai", "kontol", "ngentod","bangsat","bajingan", "memek", "asw", "ngentod", "anjing", "pantek", "tek", "jancok", "vantek", "anjir","anjer", "kambing"]
+let data = ["anjeng", "ajg","Kntl", "ngentot", "kntol", "jembot", "jembut", "jembod", "jmbd", "babi", "tai", "kontol", "ngentod","bangsat","bajingan", "memek", "asw", "ngentod", "anjing", "pantek", "tek", "jancok", "vantek", "anjir","anjer", "kambing"]
 bot.on("message", async (msg) => {
     try {
         server.forEach(exceptserver => {
@@ -44,7 +44,7 @@ bot.on("message", async (msg) => {
                  .setTitle("Commands:")
                  .setFooter("uWu")
                  .setColor("ORANGE");
-                 msg.channel.send("Hello <@" + msg.author + "> Elu Manggil Gw Buat Liat Semua Options Yang Tersedia,,,Nih Comot Aja Free Kok");
+                 msg.channel.send("Hello " + msg.author + " Elu Manggil Gw Buat Liat Semua Options Yang Tersedia,,,Nih Comot Aja Free Kok");
              // Send the embed with message.channel.send()
              msg.channel.send({embed: embed});
          }
