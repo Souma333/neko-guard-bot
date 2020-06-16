@@ -9,7 +9,7 @@ const commandPrefix = ":";
 bot.on("ready", () => {   
     console.log("Bot started! Version " + BOT_VERSION)
     bot.user.setStatus("Online")
-    bot.user.setActivity('Cheerfull Forest', { type:'WATCHING'})
+    bot.user.setActivity('Cheerful Forest', { type:'WATCHING'})
 });
 let server = ["708523418731151431"]
 /*
@@ -43,10 +43,16 @@ bot.on("message", async (msg) => {
          if(command === "beb"){
              msg.channel.send("Hai <@" + msg.author + "> ! Jangan Lupa Senyum Hari Ini :kissing_heart: :smiley: ");
          }
+        
+        if(command === "cook"){
+             msg.channel.send("Here! Here! Here! <@" + msg.author + "> ! https://media1.tenor.com/images/a773a74e01833d40a38869659792e9b1/tenor.gif ");
+         }
+        
          if(command === "help"){
              let embed = new Discord.MessageEmbed() //buat set embed discord card message
                  .addField(":beb", "Biar Nggk Merasa Bosen :kissing_heart: ")
                  .addField(":help", "Biar Nggk Kesasar :kissing_heart:")
+                 .addField(":Cook", "Kalo Mau Liat Gw Masak")
                  .setTitle("Commands:")
                  .setFooter("uWu")
                  .setColor("ORANGE");
