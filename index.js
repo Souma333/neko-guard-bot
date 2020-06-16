@@ -55,7 +55,7 @@ bot.on("message", async (msg) => {
                  .addField(":Cook", "Kalo Mau Liat Gw Masak")
                  .setTitle("Commands:")
                  .setFooter("uWu")
-                 .setColor("ORANGE");
+                 .setColor("RED");
                  msg.channel.send("Hello <@" + msg.author + "> Elu Manggil Gw Buat Liat Semua Options Yang Tersedia,,,Nih Comot Aja Free Kok");
              // Send the embed with message.channel.send()
              msg.channel.send({embed: embed});
